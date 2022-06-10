@@ -7,6 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+
+
+        <TextBlock Text="Async Demo App" FontSize="40" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <Button x:Name="executeSync" Content="Normal Execute" Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="1" Margin="10" FontSize="20" Click="executeSync_Click" IsEnabled="True"/>
+        <Button x:Name="executeAsync" Content="Async Execute" Grid.Column="4" Grid.Row="2" Grid.ColumnSpan="1" Margin="10" FontSize="20" Click="executeAsync_Click" IsEnabled="True"/>
+
+        <TextBlock x:Name="resultSync" Grid.Row="5" Grid.Column=" 3" Margin=" 10" Width="auto" Height="300"/>
+        <TextBlock x:Name="resultAsync" Grid.Row="5" Grid.Column=" 4" Margin=" 10" Width="auto" Height="300"/>
     </Grid>
 </Window>
