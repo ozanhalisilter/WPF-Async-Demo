@@ -89,9 +89,9 @@ namespace WPF_Async_Demo
             await RunDownLoadParallelAsync();
 
             watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
+            var elapsedMs = watch.ElapsedMilliseconds / 1000.0;
 
-            resultAsync.Text += $"Total exec time: {elapsedMs}";
+            resultAsync.Text += $"Total exec time: {elapsedMs} seconds";
         }
 
         private async Task RunDownLoadAsync()
